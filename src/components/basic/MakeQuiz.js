@@ -12,7 +12,6 @@ const MakeQuiz = () => {
   });
 
   const addQuestion = () => {
-    // Check if the question is not empty before adding it
     if (currentQuestion.question.trim() !== '') {
       setQuestions([...questions, currentQuestion]);
       setCurrentQuestion({
@@ -68,9 +67,7 @@ const MakeQuiz = () => {
         </div>
         <button onClick={addQuestion}>Add Question</button>
         <div className="line"></div>
-        {/* Display added questions with numbers */}
 
-        {/* Pass questions array to TestPage component */}
         <TestPage questions={questions} setQuestions={setQuestions} />
       </div>
     </div>

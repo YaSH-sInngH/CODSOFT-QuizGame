@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { jsPDF } from 'jspdf';
-import './style.css'; // Import the CSS file
+import './style.css';
 
 const TestPage = ({ questions,setQuestions }) => {
   const [userAnswers, setUserAnswers] = useState(Array(questions.length).fill(null));
@@ -36,7 +36,6 @@ const TestPage = ({ questions,setQuestions }) => {
     setUserAnswers(Array(questions.length).fill(null));
     setCorrectScore(null);
     setIncorrectScore(null);
-    // Remove all questions by updating the state to an empty array
     setQuestions([]);
   };
 
