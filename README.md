@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Quiz WebGame
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Quiz Game where you can build your own quiz game, and also can play pre-build quiz games in different levels.
+
+## Live
+https://quiz-webgame-0000.onrender.com/
 
 ## Available Scripts
 
