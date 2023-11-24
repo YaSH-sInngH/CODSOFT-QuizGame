@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
 
-function App() {
+import React,  { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/basic/home';
+import MakeQuiz from './components/basic/MakeQuiz';
+import Play from './components/basic/Play';
+import TestPage from './components/basic/TestPage';
+const App = () => {
+
+  const [questions, setQuestions] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/makequiz" element={<MakeQuiz setQuestions={setQuestions}/>} />
+        <Route path="/play" element={<Play />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/testpage" element={<TestPage questions={questions}/>} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
